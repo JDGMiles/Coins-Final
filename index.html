@@ -31,13 +31,13 @@ for(i=0; i<rows-1; i++){
   deskcontents=deskcontents+"</tr></table>"
 }
 
-if(coinfaces.length%columns!=0){deskcontents=deskcontents+"<table><tr>";}
+deskcontents=deskcontents+"<table><tr>";
 
 for(i=0; i<coinfaces.length-columns*(rows-1); i++){
   deskcontents=deskcontents+"<td style=\"width:"+coinwidth+"px; height:"+coinheight+"px;\" id=\"H"+(columns*(rows-1)+i)+"\" onclick=\"flip("+(columns*(rows-1)+i)+")\" class=\"holder\"><img style=\"width:"+coinwidth+"px; height:"+coinheight+"px;\" id=\""+(columns*(rows-1)+i)+"\" src=\"../Coins-Advanced/"+coinfaces[columns*(rows-1)+i][0]+"\" draggable=\"false\"></img></td>"
 }
 
-if(coinfaces.length%columns!=0){deskcontents=deskcontents+"</tr></table>"}
+deskcontents=deskcontents+"</tr></table>";
 
 document.getElementById("desk").innerHTML=deskcontents;
 
